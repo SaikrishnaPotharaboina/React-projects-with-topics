@@ -9,10 +9,28 @@ const user = {
 };
 
 class UserProfile extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            showBio: false
+        };
+    }
+
+    toggleBio = () => {
+        this.setState(prevState => ({
+            showBio: !prevState.showBio
+        }));
+    }
+
     render() {
         return (
             <div className="user-profile">
+                <img src={user.image} alt="profile" className="profile-img" />
                 <h2>{user.name}</h2>
+                <button onClick={this.toggleBio}>
+                    {this.state.showBio ? 'Hide Bio' : 'shpw bio'}
+                </button>
+                {this.state.showBio && <p>{user.bio}</p>}
             </div>
         );
     }
