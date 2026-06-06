@@ -4,7 +4,7 @@ function AutoSaveInput() {
 
 
     useEffect(() => {
-        const save = localStorage.getItem("autosave-text",);
+        const save = localStorage.getItem("autosave-text");
         if (save) {
             setText(save)
         };
