@@ -3,10 +3,11 @@ import React from 'react'
 // import AcronymGenerator from "./Pages/AceonymGenerator/AcronymGenerator"
 // import UserProfile from "./Pages/userprofile/UserProfile"
 // import AutoSaveInput from "./Pages/AutoSaveFile/AutoSaveInput"
-import GuessTheNumber from "./Pages/GuessTheNum/GuessTheNumber"
+// import GuessTheNumber from "./Pages/GuessTheNum/GuessTheNumber"
+import Clipboard from "./Pages/CopyClip/CopyClipboard"
 
 function App() {
-  return <GuessTheNumber />
+  return <Clipboard />
 }
 
 export default App
