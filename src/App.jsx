@@ -4,10 +4,11 @@ import React from 'react'
 // import UserProfile from "./Pages/userprofile/UserProfile"
 // import AutoSaveInput from "./Pages/AutoSaveFile/AutoSaveInput"
 // import GuessTheNumber from "./Pages/GuessTheNum/GuessTheNumber"
-import Clipboard from "./Pages/CopyClip/CopyClipboard"
+// import Clipboard from "./Pages/CopyClip/CopyClipboard"
+import FaqAccordion from "./Pages/Frequently/FrequentlyQa"
 
 function App() {
-  return <Clipboard />
+  return <FaqAccordion />
 }
 
 export default App
