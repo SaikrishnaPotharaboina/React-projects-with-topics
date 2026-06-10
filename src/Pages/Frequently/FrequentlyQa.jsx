@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import "./Frequently.css";
 
@@ -19,17 +19,48 @@ const faqs = [
 ];
 
 function FaqAccordion() {
+    const [activeIndex, setActiveIndex] = useState(null);
+
+    const toggleQA = (index) => {
+        setActiveIndex((prevIndex) =>
+            prevIndex === index ? null : index
+        );
+    };
+
     return (
         <div className="faq-container">
             <h2 className="faq-title">Frequently Asked Questions</h2>
+
             {faqs.map((faq, index) => (
-                <div className="faq-item" key={index}>
-                    <button className="faq-question">
+                <div
+                    key={index}
+                    className="faq-item"
+                    data-testid={`faq-item-${index}`}
+                >
+                    <button
+                        className="faq-question"
+                        data-testid={`faq-question-${index}`}
+                        onClick={() => toggleQA(index)}
+                    >
                         <span>{faq.question}</span>
+
                         <span className="faq-icon">
-                            <FiChevronDown />
+                            {activeIndex === index ? (
+                                <FiChevronUp data-testid={`icon-up-${index}`} />
+                            ) : (
+                                <FiChevronDown data-testid={`icon-down-${index}`} />
+                            )}
                         </span>
                     </button>
+
+                    {activeIndex === index && (
+                        <div
+                            className="faq-answer"
+                            data-testid={`faq-answer-${index}`}
+                        >
+                            {faq.answer}
+                        </div>
+                    )}
                 </div>
             ))}
         </div>
