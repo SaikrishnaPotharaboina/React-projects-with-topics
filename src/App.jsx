@@ -5,10 +5,12 @@ import React from 'react'
 // import AutoSaveInput from "./Pages/AutoSaveFile/AutoSaveInput"
 // import GuessTheNumber from "./Pages/GuessTheNum/GuessTheNumber"
 // import Clipboard from "./Pages/CopyClip/CopyClipboard"
-import FaqAccordion from "./Pages/Frequently/FrequentlyQa"
+// import FaqAccordion from "./Pages/Frequently/FrequentlyQa"
+import Confirmation from "./Pages/Conformation/Conformation"
+
 
 function App() {
-  return <FaqAccordion />
+  return <Confirmation />
 }
 
 export default App
