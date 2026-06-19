@@ -6,11 +6,12 @@ import React from 'react'
 // import GuessTheNumber from "./Pages/GuessTheNum/GuessTheNumber"
 // import Clipboard from "./Pages/CopyClip/CopyClipboard"
 // import FaqAccordion from "./Pages/Frequently/FrequentlyQa"
-import Confirmation from "./Pages/Conformation/Conformation"
+// import Confirmation from "./Pages/Conformation/Conformation"
+import DarkModeToggle from "./Pages/DarkMode/DarkMode"
 
 
 function App() {
-  return <Confirmation />
+  return <DarkModeToggle />
 }
 
 export default App
